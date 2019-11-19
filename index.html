@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="utf-8">
+	<link href="audioplayer.css" rel="stylesheet" type="text/css">
+	<link href="main.css" rel="stylesheet" type="text/css">
+	<link href="textsize.css" rel="stylesheet" type="text/css">
+	<title>Urban Access</title>
+	<link rel="shortcut icon" href="images/Logo16by16.png" /> 
+	
+</head>
+
+<body class="lighttheme" ontouchstart="">
+	<!-- Header starts -->
+	<div id="headercontainer">
+		<div id="skiptocontent"> <a href="#maincontent" class>Skip to main content</a> </div>
+			<div class="title">
+			<img id="headerlogo" src="images/UAlogoOppdatert.png" alt="Application Logo">
+				<h1>Urban Access</h1>
+				<button id="themeswap" onclick="themeSwap()" alt="change colour theme">Dark Theme</button>
+			</div>
+	</div>				
+	<!-- Header ends -->
+	<!-- Audio Player Starts -->
+	<div id="player" class="player">
+		<div tabindex="0" id="playbutton" class="play" onclick="playAudio();" alt="play audio track"> </div>
+		<div id="timeline">
+			<div id="timeball"></div>
+		</div>
+		<audio id="music" controls="controls" preload="auto">
+			<source src="music/ogg/Urban_Access_Audio_Track.ogg" type="audio/ogg" />
+			<source src="music/mp3/Urban_Access_Audio_Track.mp3" type="audio/mpeg" /> 
+			Your browser does not support the audio element. 
+		</audio>
+	</div>
+	<!-- Audio Player Ends -->
+	<!-- SkiptoNav begins -->
+	<nav id="dropdown">
+		<!-- Button opens menu on hover (actually the underlying div) and click,
+			but when the click function has been utilized, the hover function is obsolete.
+			Designed to make keyboard navigation easier, while retaining smooth mouse-function.-->
+		<button tabindex="0" id="drop" onclick="openMenu();" alt="open menu"></button>
+		<ul id="SkiptoNav">
+			<li> <a href="#headercontainer" onclick="resetAudio();">
+                To the Top
+				</a> </li>
+			<li> <a href="#accessingTheCity" onclick="skipAudio1();">
+                Accessing the City
+				</a> </li>
+			<li> <a href="#breakingBarriers" onclick="skipAudio2()">
+					Breaking Barriers
+				</a> </li>
+			<li> <a href="#urbanAccess" onclick="skipAudio3()">
+					Urban Access
+				</a> </li>
+			<li> <a href="#theAppItself" onclick="skipAudio4()">
+                The App Itself
+				</a> </li>
+		</ul>
+	</nav>
+	<!-- resizeText begins -->
+    <div id="textSize">
+        <h2>Edit text size:</h2>
+        <img tabindex="0" id="hundredText" alt="Increase text size to one hundred percent" src="images/HundreProsent.png" onclick="resizeTextOneHundred()" />
+    <img tabindex="0" id="hundredFiftyText" alt="Increase text size to one hundred and fifty percent" src="images/HundreFemtiProsent.png" onclick="resizeTextOneFifty()" />
+        <img tabindex="0" id="twoHundredText" alt="Increase text size to two hundred percent" src="images/ToHundreProsent.png" onclick="resizeTextTwoHundred()" />
+        </div>
+    <!-- resizeText ends -->
+	<!-- Front page content -->
+	<main id="wrapper">
+		<div id="contentFrame">
+			<!-- Phone container -->
+			<div class="container lightthemecontainer" id="phone"> <img src="images/iPhoneFront.png" id="phone1"> <img src="images/UAlogoOppdatert.png" class="Logo" alt="Application Logo"> <img src="images/iPhoneProfile.png" id="phone2"> </div>
+			<!-- Accessing the city -->
+			<div id="accessingTheCity">
+				<h2 id="maincontent">Accessing the City</h2>
+				<div class="textBox1">
+					<h3>The bewildering metropolis</h3>
+					<p> Modern cities can be demanding for <em>anyone</em> to navigate, with a plethora of intertwining streets, numerous different buildings, a sea of vehicles, and a maze of sidewalks and crossings. </p>
+				</div>
+				<div class="textBox2">
+					<h3>Cities and the disabled</h3>
+					<p> Cities pose an even greater number of challenges to people with some form of disability. </p>
+					<p> Several issues within architectural and infrastructural designs cause people with disabilities to be less mobile than and more dependent on other people.
+					</p>
+				</div>
+				<!-- The link below has a tabindex of -1, because we believe it will be distracting to those who navigate by keyboard. -->
+				<a tabindex="-1" href="http://www.debatingeurope.eu/2016/04/05/how-can-cities-be-made-more-accessible-for-disabled-people" target="_blank">
+				<img tabindex="-1" src="images/DisabilitiesAndCities.jpg" id="disabilityPhoto" alt="Link to a related page at http://www.debatingeurope.eu. Releavant text in image reads: about 80000000 EU citizens have some form of disability. Disabled people represent one-sixth of the EU's overall working-age population, but their employment rate is comparatively low. Europ is now an essentially urban society, with four out of five eu citizens living in towns and cities. Source: Debating Europe">
+				</a>
+				<p class="sourcetext">Image source: <br > debatingeurope.com</p>
+				<div class="textBox3">
+					<h3>Planning for disabilities</h3>
+					<p> While architects and urban planners will likely have to consider these issues for future projects, <em>we</em> as developers must ask ourselves: <span class=”quotation”>“Can we use technology to help our societies overcome these issues, and perhaps even rectify them?”</span> </p>
+				</div>
+			</div>
+			<!-- Breaking Barriers -->
+			<div id="breakingBarriers">
+				<h2>Breaking Barriers</h2>
+				<div class="textBoxR">
+					<h3>The present and the future</h3>
+					<p> While some apps exist to guide wheelchair users and blind people through cities, they must utilize the areas that are already accessible, largely avoiding many of the challenges. The goal of Urban Access is to give City Councils and relevant organizations, and perhaps private businesses, concrete information about where inaccessibility has occurred, and what specifically needs to be fixed. All leading to our ultimate vision of a 100% accessible city. </p>
+				</div>
+				<div class="textBox">
+					<h3>Communicate the issues</h3>
+					<p> Urban Access provides its users with the ability and opportunity to report the obstacles they face on their ventures through the city. Using GPS and photographic technologies, in combination with short written or recorded descriptions, users are able to send accurate reports of a wide variety of encountered barriers. </p>
+				</div>
+			</div>
+			<!-- Icon box -->
+			<div class="iconBox">
+				<div class="icon1"> <img src="images/Stairs.png" class="iconImage">
+					<h4>Encounter obstacle</h4>
+					<p> Encounter an unpassable obstacle in your everyday life. </p>
+				</div>
+				<div class="icon2"> <img src="images/Camera.png" class="iconImage">
+					<h4>Take a photo</h4>
+					<p> Take a photo of the obstacle with the application. </p>
+				</div>
+				<div class="icon3"> <img src="images/Report.png" class="iconImage">
+					<h4>Send report</h4>
+					<p> Send a report of the issue through the application. </p>
+				</div>
+				<div class="icon4"> <img src="images/Ramp.png" class="iconImage">
+					<h4>Remove obstacle</h4>
+					<p> Once the report is recieved the obstacle will be removed as soon as possible. </p>
+				</div>
+			</div>
+			<!-- Urban Access -->
+			<div id="urbanAccess">
+				<h2>Urban Access</h2>
+				<div class="textBoxR">
+					<h3>Assistance from city to city</h3>
+					<p> While the ultimate goal of Urban Access is to transform every obstacle in our cities, we strive to provide assistance on every step of the journey. We make sure that our users can request help in any event that they cannot, for example enter a building, ascend a flight of stairs or access public transportation. The availability of the service depends on an active partnership within the city, and therefore is not currently available in every location.</p>
+				</div>
+				<div class="textBox">
+					<h3>Empowering the citizen</h3>
+					<p> The main functionality of the app is available for free, as it’s designed to be a tool of empowerment to people with disabilities; allowing them to directly impact the cities they live in or visit. The paid service of requesting help puts users in direct contact with Urban Access’ local partners, whether they be public employees, organizations dealing with accessibility, local businesses or a sole proprietorship. These relations will vary from city to city, depending on local initiatives and projects. </p>
+				</div>
+			</div>
+			<!-- Demo -->
+			<h2 id="theAppItself">The App Itself</h2>
+			<div class="demoContainer1 lightthemecontainer" id="mainpage">
+				<h3>Main Page</h3> <img class="appimg" alt="The app's main page, consisting of five buttons leading to the different functions." src="images/FrontList.png">
+				<h4>Simple and intuitive</h4>
+				<p> A – Request on-the-spot assistance from our employees positioned around the capital. This is a paid service.
+					<br> B – View your profile and how you present yourself to our employees.
+					<br> C – Information about our company, our vision and our user terms.
+					<br> D – Find out exactly where barriers in your city have been reported and where they have been fixed.
+					<br> E – Report an accessibility barrier you encounter. </p>
+			</div>
+			<div class="demoContainer2 lightthemecontainer" id="reportbarrier1">
+				<h3>Report Barrier</h3> <img class="appimg" alt="The camera is used to capture the scene where a barrier is encountered. Location is pinpointed below the image." src="images/CameraList.png">
+				<h4>Flexible and exact</h4>
+				<p> A – Take a picture of the barrier you wish to report.
+					<br> B – Overview over your position so you can be sure the correct location is being pinpointed.
+					<br> C – Submit barrier.
+					<br> D – See your previous submission as well as the progress that has been done towards fixing it.
+					<br> </p> 
+			</div>
+			<div class="demoContainer1 lightthemecontainer" id="reportbarrier2">
+				<h3>Report Barrier</h3> <img class="appimg" alt="The submission in the image reads: These stairs are unaccessible to me as a wheelchair user, and I have to take a huge detour every day to get to the top. I would be very happy if this issue could be fixed." src="images/ReportList.png">
+				<h4>Flexible and exact</h4>
+				<p> E – Send your submission after shortly describing it.
+					<br> </p>
+			</div>
+			<div class="demoContainer2 lightthemecontainer" id="requesthelp" alt="This page consists of the Get Help and Call or Chat buttons and a map of the city.">
+				<h3>Request Help</h3> <img class="appimg" alt="Request help easily from your location." src="images/HelpList.png">
+				<h4>Effective and responsive</h4>
+				<p> A – Call or commence chatting with one of our local helpers, ready to get you through a barrier.
+					<br> B – Submit your location with the push of a button, and one of our local helpers will come to assistance.
+					<br> C – Check your position to make sure our helpers arrive at your exact location.
+					<br> </p>
+			</div>
+			<div class="demoContainer1 lightthemecontainer" id="profilepage" alt="This image illustrates information provided by the user.">
+				<h3>Profile</h3> <img class="appimg" alt="The profile consists of your picture, payment options, and any other personal information your wish to supply." src="images/ProfileList.png">
+				<h4>Clear and personal</h4>
+				<p> A – View and change your profile picture, should you choose to have one.
+					<br> B – Your full name.
+					<br> C – Your age.
+					<br> D – Which city you’re located in.
+					<br> E – Your specified disability.
+					<br> F – Read our privacy policy, and find out who can access your information.
+					<br> G – Change or view your credit card information.
+					<br> </p>
+			</div>
+			<div class="demoContainer2 lightthemecontainer" id="overview">
+				<h3>Overview</h3> <img class="appimg" alt="A map of all submissions in the city." src="images/OverviewList.png">
+				<h4>Visual and Systematic</h4>
+				<p> A – Gray pins show locations with barriers that are under the process of being fixed.
+					<br> B – Green pins show where barriers have been fixed the past month.
+					<br> C – Red pins show where barriers have been submitted, but haven’t been looked in to yet.
+					<br> </p>
+			</div>
+			<div id="conclusion">
+				<div class="textBox">
+					<p>This concludes our presentation of Urban Access. We hope the application will prove useful to you!</p>
+				</div>
+			</div>
+		</div>
+		<footer id="footer">
+			<p>Website created by Fredrik Andersen, Ruben Jahren & Magnus Lillekjendlie</p>
+		</footer>
+	</main>
+	<script type="text/javascript" src="audioplayer.js"></script>
+	<script type="text/javascript" src="textsize.js"></script>
+	<script type="text/javascript" src="navigation.js"></script>
+	<script type="text/javascript" src="themeswap.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,871 @@
+/************************************************************************
+Global attributes
+************************************************************************/
+
+@font-face {
+    font-family: "Andika";
+    src: url('Andika-R.ttf');
+}
+
+@font-face {
+    font-family: "Andika";
+    src: url('Andika-I.ttf');
+	font-style: italic;
+}
+
+html, body {
+	margin: 0;
+	height: 100%;
+	font-size: 1em;
+	line-height: 1.5em;
+	overflow-x: hidden;
+	font-family: Andika;
+}
+
+.lighttheme {
+	background-color: #E9EBEE;
+	color: #333333;
+}
+
+.darktheme {
+	background-color: #101010;
+	color: #C0C0C0;
+}
+
+.lightthemecontainer {
+	background-color: white;
+}
+
+.darkthemecontainer {
+	background-color: #515151;
+	color: white;
+}
+
+p {
+	margin-top: 2.25em;
+	margin-bottom: 2.25em;
+	text-align: left;
+}
+
+em {
+	font-style: italic; 
+}
+
+/************************************************************************
+Header
+************************************************************************/
+
+.headercontainer {
+	
+}
+
+#skiptocontent a {
+    padding: 6px;
+    position: absolute;
+    top: -200px;
+    left: 0px;
+    color: black;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    border-bottom-right-radius: 8px;
+    background: white;
+    -webkit-transition: top 1s ease-out, background 1s linear;
+    transition: top 0.2s ease-out, background 0.2s linear;
+    z-index: 100;
+}
+
+#skiptocontent a:focus {
+	top: 0px;
+}
+
+#headerlogo {
+	width: 5%;
+	height: 5%;
+	vertical-align: middle;
+}
+
+.title {
+	top: 0;
+	margin-top: 0;
+	min-width:260px;
+	width: 100%;
+	height: auto;
+	background: #6BAFDD; /* Fallback */
+    background: -webkit-linear-gradient(left top, #6BAFDD, #515151);
+    background: -o-linear-gradient(bottom right, #6BAFDD, #515151);
+    background: -moz-linear-gradient(bottom right, #6BAFDD, #515151);
+    background: linear-gradient(to bottom right, #6BAFDD, #515151);
+	text-align: center;
+	color: #f2f2f2;
+	font-size: 200%;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+	/*text-shadow: -2px 0 #6BAFDD, 0 2px #6BAFDD, 2px 0 #6BAFDD, 0 -2px #6BAFDD;*/
+}
+
+.title h1 {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+#themeswap {
+	float: right;
+    font-size: 2.5vh;
+	color: #E9EBEE;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+	background: #333; /* Fallback */
+    background: -webkit-linear-gradient(right top, white, #333);
+    background: -o-linear-gradient(bottom left, white, #333);
+    background: -moz-linear-gradient(bottom left, white, #333);
+    background: linear-gradient(to bottom left, white, #333);
+	background-size: 100%;
+	background-position: 75%;
+	background-repeat: no-repeat;
+    padding: 12px 16px 12px 16px;
+    border: 2px solid black;
+    cursor: pointer;
+	width: 15%;
+	height: 5%;
+	vertical-align: middle;
+}
+
+#themeswap:hover {
+	border-width: 5px;
+	transition: 0.05s;
+}
+
+#themeswap:active {
+    font-size: 2.75vh;
+	border-width: 5px;
+	transition: 0.05s;
+}
+
+#themeswap:focus {
+    font-size: 2.75vh;
+	border-width: 5px;
+	transition: 0.05s;
+}
+
+/************************************************************************  
+SkiptoNav
+************************************************************************/
+
+#dropdown {
+	line-height: 30px;
+	position: fixed;
+    display:;
+	top: 20%;
+	left: 2%;
+	height: 20vh;
+    width: 10vh;
+	z-index: 2147483641;
+}
+
+#drop {
+	line-height: 30px;
+	color: #E9EBEE;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+	background: url(images/menu.png), #6BAFDD; /* Fallback */
+    background: url(images/menu.png), -webkit-linear-gradient(right top, #6BAFDD, #333);
+    background: url(images/menu.png), -o-linear-gradient(bottom left, #6BAFDD, #333);
+    background: url(images/menu.png), -moz-linear-gradient(bottom left, #6BAFDD, #333);
+    background: url(images/menu.png), linear-gradient(to bottom left, #6BAFDD, #333);
+	background-size: 100%;
+	background-position: 75%;
+	background-repeat: no-repeat;
+    padding: 12px 16px 12px 16px;
+    border: 2px solid black;
+    cursor: pointer;
+	width: 60%;
+	height: 30%;
+	z-index: 2147483642;
+}
+
+#SkiptoNav {
+	line-height: 30px;
+	display: none;
+	width: 300%;
+	margin: 0;
+	padding: 0;
+	z-index: 2147483643;
+}
+
+#SkiptoNav li {
+	font-size: 20px;
+	line-height: 30px;
+	width: 93%;
+	list-style-type: none;
+	z-index: 2147483644;
+}
+
+#SkiptoNav li a {
+	width: 100%;
+	color: #E9EBEE;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+	background: #6BAFDD; /* Fallback */
+    background: -webkit-linear-gradient(left top, #6BAFDD, #333);
+    background: -o-linear-gradient(bottom right, #6BAFDD, #333);
+    background: -moz-linear-gradient(bottom right, #6BAFDD, #333);
+    background: linear-gradient(to bottom right, #6BAFDD, #333);
+	border-radius: 10px;
+	border: 1px solid black;
+	text-decoration: none;
+	padding:5px;
+	display:block;
+	z-index: 2147483645;
+}
+
+li a:hover {
+	text-decoration:none;
+}
+
+#drop:hover {
+	border-width: 3px;
+	transition: 0.05s;
+}
+
+#drop:active {
+	border-width: 3px;
+	background-size: 110%;
+	transition: 0.05s;
+}
+
+#drop:focus {
+	border-width: 3px;
+	background-size: 110%;
+	transition: 0.05s;
+}
+
+#SkiptoNav li a:hover {
+	border-width: 3px;
+	font-weight: bold;
+	transition: 0.05s;
+}
+
+#SkiptoNav li a:active {
+	border-width: 3px;
+	font-size: 28px;
+	transition: 0.05s;
+}
+
+#SkiptoNav li a:focus {
+	border-width: 3px;
+	font-weight: bold;
+	transition: 0.05s;
+}
+
+/* Displays menu while hovering div */
+#dropdown:hover #SkiptoNav {
+	display: block;
+}
+/* Displays menu while hovering button */
+#drop:hover #SkiptoNav {
+	display: block;
+}
+/* Displays menu while hovering menu */
+#SkiptoNav:hover #SkiptoNav {
+	display: block;
+}
+
+/* Code below doesn't work as intended, has been worked around. */
+
+/* Displays menu when keyboard focus is on div */
+#dropdown:focus #SkiptoNav {
+	display: block;
+}
+/* Displays menu when keyboard focus is on button */
+#drop:focus #SkiptoNav {
+	display: block;
+}
+/* Displays menu when keyboard focus is on menu */
+#SkiptoNav:focus #SkiptoNav {
+	display: block;
+}
+/* Displays menu when keyboard focus is on list */
+#SkiptoNav li:focus #SkiptoNav {
+	display: block;
+}
+/* Displays menu when keyboard focus is on links */
+#SkiptoNav li a:focus #SkiptoNav {
+	display: block;
+}
+/* Displays menu when div is active */
+#dropdown:active #SkiptoNav {
+	display: block;
+}
+/* Displays menu when button is active */
+#drop:active #SkiptoNav {
+	display: block;
+}
+/* Displays menu when menu is active */
+#SkiptoNav:active #SkiptoNav {
+	display: block;
+}
+/* Displays menu when list is active */
+#SkiptoNav li:active #SkiptoNav {
+	display: block;
+}
+/* Displays menu when links is active */
+#SkiptoNav li a:active #SkiptoNav {
+	display: block;
+}
+
+	
+/************************************************************************  
+Front Page content
+************************************************************************/
+
+
+#wrapper{
+	height: 100%;
+	margin: 0 auto -30px;
+	min-width: 260px;
+}
+
+#contentFrame {
+	width: 65%;
+	margin: auto;
+}
+
+
+.container {
+	box-shadow: 0px 0px 5px 0px gray;
+	width: 96.5%;
+	
+	margin-top: 30px;
+	padding: 20px;
+    text-align: center;
+    display: inline-block;
+	overflow: hidden;
+}
+
+h2 {
+    text-align: center;
+    margin-top: 30px auto auto auto;
+}
+
+/************************************************************************  
+Phone container
+************************************************************************/
+
+#phone {
+	height: 470px;
+	
+	overflow: hidden;
+}
+#phone1 {
+	float: left;
+	max-width: 38%;
+}
+
+.Logo {
+	width: 30%;
+	margin: 0 -10% 0 -10%;
+    margin-top: 13%;
+}
+
+#phone2 {
+	float: right;
+	max-width: 38%;
+}
+
+img {
+	max-height: 100%;
+	max-width: 100%;
+}
+
+/************************************************************************  
+Cities and the disabled container
+************************************************************************/
+
+#accessingTheCity {
+    display: inline-block;
+}
+.textBox, .textBox1, .textBox2, .textBox3 {
+	width: 40%;
+	padding: 10px;
+	margin-top: 5px;
+}
+
+.textBox1, .textBox2 {
+}
+
+#disabilityPhoto {
+    float: right;
+    width: 55%;
+    padding: 10px;
+    margin-top: -480px;
+}
+
+span {
+    font-style: italic;
+    display: inline-block;
+    margin: 10px;
+    padding: 3px;
+    border-bottom: 2px solid gray;
+    border-left: 1px solid gray;
+}
+
+.sourcetext {
+	clear: left;
+	font-size: 90%;
+}
+
+/********************************************
+Breaking Barriers
+********************************************/
+
+#breakingBarriers {
+    display: inline-block;
+}
+
+.textBoxR {
+    float: right;
+    margin-top: 5px;
+    width: 40%;
+}
+
+/************************************************************************  
+Icon Box
+************************************************************************/
+
+.iconBox {
+	width: 100%;
+	padding: 10px;
+	margin-top: 20px;
+	display: inline-block;
+}
+.icon1, .icon2, .icon3 {
+	float: left;
+	width: 23%;
+	border-right: 1px solid #333333;
+	text-align: center;
+	padding: 5px;
+    height: 100%;
+    display: inline-block;
+}
+
+.icon4 {
+	border: none;
+	text-align: center;
+	width: 23%;
+	float: left;
+}
+
+.iconImage {
+	max-width: 50%;
+	height: auto;
+}
+
+/************************************************
+Demo
+************************************************/
+
+.demoContainer1, .demoContainer2 {
+    box-shadow: 0px 0px 5px 0px grey;
+	width: 96.5%;
+	margin-top: 30px;
+	padding: 20px;
+    text-align: center;
+    display: inline-block;
+    height: auto;
+}
+
+.demoContainer1 img, .demoContainer2 img {
+	width:45%;
+	max-width: 320px;
+	height: auto;
+	margin-top: -7%;
+}
+
+.demoContainer1 img {
+    float: left;
+	margin-left: -10%;
+}
+
+.demoContainer2 img {
+    float: right;
+}
+
+.demoContainer1 p, .demoContainer2 p {
+	width: 45%;
+	max-width: none;
+}
+
+.demoContainer1 p {
+    float: right;
+	margin-right: 1%;
+	text-align: left;
+}
+
+.demoContainer2 p {
+    float: left;
+	margin-left: 1%;
+	text-align: left;
+}
+
+#conclusion div p {
+	margin-bottom: 1vh;
+}
+
+/************************************************************************  
+Footer
+************************************************************************/
+
+#footer {
+	width: 100%;
+	height: auto;
+	margin-bottom: 0px;
+	overflow: hidden; 
+}
+#footer p {
+	text-align: center;
+	font-size: 2ex;
+	width: 90%;
+	margin: auto;
+	padding: 5px;
+}
+
+/************************************************************************  
+Responsive CSS
+************************************************************************/
+
+@media only screen and (max-width : 480px) {
+   /* Smartphone view*/
+   .title {
+	font-size: 100%;
+   }
+   
+   #contentFrame {
+	width: 100%;
+   }
+   
+   .container {
+	height: 20%;
+	max-height: 240px;
+   }
+   
+   #dropdown {
+	top: 15%;
+	}
+	
+	#disabilityPhoto {
+	margin-top: 0;
+	padding: 0;
+	float: none;
+	width: 100%;
+	max-width: 480px;
+	height: auto;
+   }
+   
+	.textBox, .textBox1, .textBox2, .textBox3, .textBoxR {
+	width: 80%;
+	max-width: 40ch;
+	margin: 5px auto auto auto;
+	text-align: center;
+	vertical-align: middle;
+	float: none;
+	}
+	
+	.textBox p, .textBox1 p, .textBox2 p, .textBox3 p, .textBoxR p {
+	}
+	
+   .iconBox {
+	padding: 0;
+	
+	}
+   
+   .icon1, .icon2, .icon3, .icon4 {
+	position: relative;
+	width: 49%;
+	height: 260px;
+	padding: 1px;
+	margin: auto;
+   }
+   
+   .icon1, .icon2 {
+	border-bottom: 1px solid #333333;
+   }
+   
+   .icon1, .icon3 {
+	display: inline-block;
+	left: 0;
+   }
+   
+   .icon2, .icon4 {
+	display: block;
+	right: 0;
+	border-right: none;
+   }
+   
+   .icon1 h4, .icon2 h4, .icon3 h4, .icon4 h4 {
+	margin: auto;
+   }
+   
+   .demoContainer1, .demoContainer2 {
+	}
+	
+	.demoContainer1 img, .demoContainer2 img {
+	width: 75%;
+	max-width: 480px;
+	height: auto;
+	float: none;
+	margin: auto;
+	}
+	
+	
+	.demoContainer1 p, .demoContainer2 p {
+	width: 80%;
+	max-width:360px;
+	float: none;
+	margin: auto;
+	}
+	
+	#themeswap {
+	height: 2%;
+	font-size: 1.2vh;
+   }
+   
+   #themeswap:hover {
+	border-width: 5px;
+	transition: 0.05s;
+	}
+
+	#themeswap:active {
+    font-size: 1.5vh;
+	border-width: 5px;
+	transition: 0.05s;
+	}
+
+	#themeswap:focus {
+    font-size: 1.5vh;
+	border-width: 5px;
+	transition: 0.05s;
+	}
+   
+}
+@media only screen and (max-width : 650px) and (min-width : 481px) {
+   /* Tablet view*/
+   .title {
+	font-size: 100%;
+   }
+   
+   #contentFrame {
+	width: 100%;
+   }
+   
+   .container {
+	height: 20%;
+	max-height: 360px;
+   }
+   
+   #dropdown {
+	top: 15%;
+	}
+	
+	#disabilityPhoto {
+	margin-top: 0;
+	padding: 0;
+	float: none;
+	width: 100%;
+	max-width: 480px;
+	height: auto;
+   }
+   
+	.textBox, .textBox1, .textBox2, .textBox3, .textBoxR {
+	width: 80%;
+	max-width: 40ch;
+	margin: 5px auto auto auto;
+	text-align: center;
+	vertical-align: middle;
+	float: none;
+	}
+	
+	.textBox p, .textBox1 p, .textBox2 p, .textBox3 p, .textBoxR p {
+	}
+	
+   .iconBox {
+	padding: 0;
+	
+	}
+   
+   .icon1, .icon2, .icon3, .icon4 {
+	position: relative;
+	width: 49%;
+	height: 320px;
+	padding: 1px;
+	margin: auto;
+   }
+   
+   .icon1, .icon2 {
+	border-bottom: 1px solid #333333;
+   }
+   
+   .icon1, .icon3 {
+	display: inline-block;
+	left: 0;
+   }
+   
+   .icon2, .icon4 {
+	display: block;
+	right: 0;
+	border-right: none;
+   }
+   
+   .icon1 h4, .icon2 h4, .icon3 h4, .icon4 h4 {
+	margin: auto;
+   }
+   
+   .demoContainer1, .demoContainer2 {
+	}
+	
+	.demoContainer1 img, .demoContainer2 img {
+	width: 75%;
+	max-width: 480px;
+	height: auto;
+	float: none;
+	margin: auto;
+	}
+	
+	
+	.demoContainer1 p, .demoContainer2 p {
+	width: 80%;
+	max-width:360px;
+	float: none;
+	margin: auto;
+	}
+	
+	.demoContainer1 img, .demoContainer2 img {
+	width: 75%;
+	max-width: 480px;
+	height: auto;
+	float: none;
+	margin: auto;
+	}
+	
+	
+	.demoContainer1 p, .demoContainer2 p {
+	width: 80%;
+	max-width:360px;
+	float: none;
+	margin: auto;
+	}
+	
+	#themeswap {
+	height: 2%;
+	font-size: 1.2vh;
+   }
+   
+   #themeswap:hover {
+	border-width: 5px;
+	transition: 0.05s;
+	}
+
+	#themeswap:active {
+    font-size: 1.5vh;
+	border-width: 5px;
+	transition: 0.05s;
+	}
+
+	#themeswap:focus {
+    font-size: 1.5vh;
+	border-width: 5px;
+	transition: 0.05s;
+	}
+   
+   
+}
+@media only screen and (max-width : 1050px) and (min-width : 651px) {
+   /* Small desktop / ipad view*/
+   #contentFrame {
+	width: 80%;
+   }
+   
+   #phone {
+    height: 25%;
+    overflow: hidden;
+	}
+   
+   .container {
+	max-height: 512px;
+   }
+   
+   #dropdown {
+	top: 15%;
+	}
+	
+	#disabilityPhoto {
+	margin-top: 0;
+	padding: 0;
+	float: none;
+	width: 100%;
+	max-width: 1050px;
+	height: auto;
+   }
+   
+	.textBox, .textBox1, .textBox2, .textBox3, .textBoxR {
+	width: 80%;
+	max-width: 40ch;
+	margin: 5px auto auto auto;
+	text-align: center;
+	vertical-align: middle;
+	float: none;
+	}
+   
+   #themeswap {
+	height: 2%;
+	font-size: 1.2vh;
+   }
+   
+   #themeswap:hover {
+	border-width: 5px;
+	transition: 0.05s;
+	}
+
+	#themeswap:active {
+    font-size: 1.5vh;
+	border-width: 5px;
+	transition: 0.05s;
+	}
+
+	#themeswap:focus {
+    font-size: 1.5vh;
+	border-width: 5px;
+	transition: 0.05s;
+	}
+   
+}
+@media only screen and (max-width : 1366px) and (min-width : 1051px) {
+   /* Medium desktop*/
+   #themeswap {
+	font-size: 2.5vh;
+   }
+   #themeswap:hover {
+	border-width: 5px;
+	transition: 0.05s;
+	}
+
+	#themeswap:active {
+    font-size: 2.75vh;
+	border-width: 5px;
+	transition: 0.05s;
+	}
+
+	#themeswap:focus {
+    font-size: 2.75vh;
+	border-width: 5px;
+	transition: 0.05s;
+	}
+}
+@media only screen and (min-width : 1367px) {
+   /* Wide desktop*/
+   #disabilityPhoto {
+	margin-top: -40%;
+   }
+   
+   .demoContainer1 img, .demoContainer2 img {
+    
+	margin:-5% auto auto auto;
+	}
+	
+	
+}

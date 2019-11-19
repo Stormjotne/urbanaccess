@@ -1,0 +1,70 @@
+/******* ResizeText*******/
+#textSize {
+    float: right;
+    position: fixed;
+    right: 4%;
+    font-size: 2.0vh;
+    
+}
+
+
+#hundredText {
+    display: block;
+    height: 5vh;
+    margin-left: 25%;
+	background-color: #E9EBEE;
+}
+
+#hundredText:hover {
+    border-style:solid;
+}
+
+#hundredFiftyText {
+    display: block;
+    height: 5vh;
+    margin-top: 5px;
+    margin-left: 25%;
+    background-color: #E9EBEE;
+}
+
+#hundredFiftyText:hover {
+    border-style:solid;
+}
+
+
+#twoHundredText {
+    display: block;
+    height: 5vh;
+    margin-top: 5px;
+    margin-left: 25%;
+	background-color: #E9EBEE;
+}
+
+#twoHundredText:hover {
+    border-style:solid;
+}
+
+@media only screen and (max-width : 480px) {
+   /* Smartphone view*/
+   #textSize {
+    display: none;
+    }
+}
+@media only screen and (max-width : 650px) and (min-width : 481px) {
+   /* Tablet view*/
+   #textSize {
+    display: none;
+    }
+}
+@media only screen and (max-width : 1050px) and (min-width : 651px) {
+   /* Small desktop / ipad view*/
+   #textSize {
+    display: none;
+    }
+}
+@media only screen and (max-width : 1290px) and (min-width : 1051px) {
+   /* Medium desktop*/
+   #textSize {
+    font-size: 1.5vh;
+    }
+}
